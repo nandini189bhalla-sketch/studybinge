@@ -84,7 +84,7 @@ st.title("📚 StudyBinge: AI Focus & Break Optimizer")
 # Credential Presentation Badges
 col_name1, col_name2 = st.columns([2, 1])
 with col_name1:
-    st.markdown("### **Developed By:** Suryansh Chandel, Satvik Goel, Vansh Pawar, Dhruv Dahiya, Mayank Yadav")
+    st.markdown("### **Developed By:** Nandini Bhalla")
 with col_name2:
     st.markdown("### **Class:** XII-B | **Project Board:** 2026")
 
