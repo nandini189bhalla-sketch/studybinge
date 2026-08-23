@@ -1,0 +1,2 @@
+# studybinge
+AI PROJECT
