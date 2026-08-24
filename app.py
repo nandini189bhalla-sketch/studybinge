@@ -86,7 +86,7 @@ col_name1, col_name2 = st.columns([2, 1])
 with col_name1:
     st.markdown("### **Developed By:** Nandini Bhalla, Shrishti, Hannah , Adwaita, Purvi , Somya")
 with col_name2:
-    st.markdown("### **Class:** XII-B | **Project Board:** 2026")
+    st.markdown("### **Class:** XII-B")
 
 st.write("Input your metrics below to build a data-driven, burnout-free study schedule.")
 
@@ -207,8 +207,4 @@ with st.expander("🛠️ TECHNICAL BRIEF: Our Special Practical Machine Learnin
         * Bound the operational prediction models directly behind interactive web elements to transform complex data matrices into instant, automated study recommendations.
         
     ---
-    ### 📊 Quick Metric Cheat-Sheet
-    * **🎯 Optimal Focus Window:** Your customized study limit calculated natively by the linear regression core engine.
-    * **⚡ Live Fatigue Index:** Active health evaluation score. Values below **4.0** denote fresh memory readiness; values above **4.0** trigger high-risk fatigue alerts.
-    * **🌍 SDG Alignment:** Explicitly engineered to promote **SDG 4 (Quality Education)** and **SDG 3 (Good Health & Well-Being)** by checking physical habits against cognitive production milestones.
     """)
