@@ -36,11 +36,15 @@ st.sidebar.title("🛠️ Session Workspace")
 # Subject Profile Selector
 st.sidebar.subheader("📖 Select Current Subject")
 subject = st.sidebar.selectbox(
-    "What are you studying right now?",
-    ["Mathematics / Physics (High Analytical Load)", 
-     "Chemistry / Biology (High Memorization Load)", 
-     "Computer Science / IP (Practical Logic Load)", 
-     "English / Humanities (Language & Reading Load)"]
+"What are you studying right now?",
+    [
+        "Mathematics / Physics (High Analytical Load)", 
+        "Accountancy (High Numerical & Analytical Load)",
+        "Chemistry / Biology (High Memorization Load)", 
+        "Artificial Intelligence / IP (Practical Logic Load)", 
+        "Business Studies / BST (Theory & Case Study Load)",
+        "English / Humanities (Language & Reading Load)"
+    ]
 )
 
 st.sidebar.markdown("---")
@@ -123,10 +127,14 @@ st.subheader("📊 2. Real-Time Analytics Dashboard")
 
 if "Mathematics" in subject:
     subject_modifier = 1.3
+elif "Accountancy" in subject:
+    subject_modifier = 1.25
 elif "Chemistry" in subject:
     subject_modifier = 1.1
-elif "Computer Science" in subject:
+elif "Artificial Intelligence" in subject:
     subject_modifier = 1.0
+elif "Business Studies" in subject:
+    subject_modifier = 0.9
 else:
     subject_modifier = 0.8
     
@@ -158,10 +166,10 @@ if st.button("Calculate My Optimal Focus Window", type="primary"):
     user_input = np.array([[difficulty, sleep, screentime, target]])
     prediction = model.predict(user_input)[0]
     
-    if "Mathematics" in subject:
+    if "Mathematics" in subject or "Accountancy" in subject:
         prediction = prediction * 0.85  
-    elif "English" in subject:
-        prediction = prediction * 1.15  
+    elif "Business Studies" in subject or "English" in subject:
+        prediction = prediction * 1.15
         
     final_streak = max(15, min(int(prediction), 90))
     
